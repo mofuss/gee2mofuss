@@ -82,10 +82,8 @@ var modis_lc = ee.ImageCollection("MODIS/061/MCD12Q1"),
     grip4_north_america = ee.FeatureCollection("projects/sat-io/open-datasets/GRIP4/North-America"),
     grip4_middle_east_central_asia = ee.FeatureCollection("projects/sat-io/open-datasets/GRIP4/Middle-East-Central-Asia"),
     MofussRegions = ee.FeatureCollection("users/aghilardi/mofuss_regions0_simp"),
-    LSIBs = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017");
-
-
-
+    LSIBs = ee.FeatureCollection("USDOS/LSIB_SIMPLE/2017"),
+    ESA_AGB_CCI = ee.ImageCollection("projects/sat-io/open-datasets/ESA/ESA_CCI_AGB");
 
 // -------------------------------------User-defined variables----------------------------------------------
 // Make sure to fill the following variables as desired
@@ -94,7 +92,7 @@ var tyRoi = 'countries'; //'world','regions','countries';
 // If tyRoi == 'countries', type country name here.
 // If tyRoi == 'regions', type region name here.
 // If tyRoi == 'world, country is not used.
-var country = 'ZMB'; //'ASIA_adm0_central','NPL', country or region of interest. Check console for available
+var country = 'RWD'; //'ASIA_adm0_central','NPL', country or region of interest. Check console for available
 // options.
 // Pixel size in m
 var scale = 100; // 1000 or 100
@@ -812,4 +810,6 @@ exportFunc(ee.Image(expHRSL
   roiExp);
 }
 */
+
+
 
